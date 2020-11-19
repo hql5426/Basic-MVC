@@ -20,6 +20,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import Model.Voter;
+import javafx.scene.control.TextField;
 
 
 /**
@@ -52,6 +53,13 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private Button fNameID;
+    
+      @FXML
+    private TextField searchBox;
+
+    @FXML
+    private Button searchButton;
+
 
 
     @FXML
@@ -238,7 +246,13 @@ public class FXMLDocumentController implements Initializable {
         
         myManager = (EntityManager) Persistence.createEntityManagerFactory("HaydenLongFXML_3QuizPU").createEntityManager();
 
-    } 
+    }
+    
+     @FXML
+    void searchfName(ActionEvent event) {
+        
+         System.out.println("Clicked");
+    }
     
      public void create(Voter voter) {
         try {
@@ -405,6 +419,7 @@ public class FXMLDocumentController implements Initializable {
         
         return voters;
         }
+        
 }
 
 
