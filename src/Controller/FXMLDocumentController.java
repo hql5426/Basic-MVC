@@ -66,6 +66,9 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button fNameID;
     
+     @FXML
+    private Button advSearch;
+    
     @FXML
     private TableView<Voter> tableView;
 
@@ -305,6 +308,28 @@ public class FXMLDocumentController implements Initializable {
         }
 
     }
+    
+     @FXML
+    void advSearch(ActionEvent event) {
+        
+         System.out.println("Clicked");
+         
+         String name = searchBox.getText();
+
+        List<Voter> voters = readByNameAdvanced(name);
+
+        if (voters == null || voters.isEmpty()) {
+
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Empty Voter Not Found");
+            alert.setHeaderText("404 ERROR");
+            alert.setContentText("No voter was found");
+            alert.showAndWait();
+        } else {
+
+            setTableData(voters);
+        }
+    }
     /*
           @FXML
     void actionShowDetails(ActionEvent event) throws IOException {
@@ -464,6 +489,20 @@ public class FXMLDocumentController implements Initializable {
         
         return voters;
        }
+       
+       public List<Voter> readByNameAdvanced(String firstname) {
+        Query query = myManager.createNamedQuery("Voter.findByfNameAdvanced");
+
+        query.setParameter("firstname", firstname);
+
+        List<Voter> voters = query.getResultList();
+        
+        for (Voter v : voters) {
+            System.out.println(v.getId() + " " + v.getFirstname() + " " + v.getLastname()+ " " + v.getPoliticalparty()+ " "+ v.getHasvoted());
+        }
+
+        return voters;
+    }
         
         public void update(Voter model) {
         try {

@@ -24,7 +24,7 @@
       <Button fx:id="readButton" layoutX="516.0" layoutY="137.0" mnemonicParsing="false" onAction="#readInfo" text="Read" />
       <Button fx:id="findPartyandHasVoted" layoutX="71.0" layoutY="282.0" mnemonicParsing="false" onAction="#readPartyandHasVoted" text="Find Vote Status and Party" />
       <Button fx:id="fNameID" layoutX="384.0" layoutY="282.0" mnemonicParsing="false" onAction="#fNameID" text="Find First Name and ID" />
-      <TableView fx:id="tableView" layoutX="42.0" layoutY="490.0" prefHeight="200.0" prefWidth="574.0">
+      <TableView fx:id="tableView" layoutX="40.0" layoutY="553.0" prefHeight="200.0" prefWidth="574.0">
         <columns>
           <TableColumn fx:id="idColumn" prefWidth="98.5" text="ID" />
             <TableColumn fx:id="fNameColumn" minWidth="0.0" prefWidth="110.0" text="First Name" />
@@ -46,5 +46,6 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Button fx:id="advSearch" layoutX="447.0" layoutY="498.0" mnemonicParsing="false" onAction="#advSearch" text="Advanced Search" />
     </children>
 </AnchorPane>
