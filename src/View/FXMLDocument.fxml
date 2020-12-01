@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="807.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLDocumentController">
       <children>
         <Button fx:id="button" layoutX="262.0" layoutY="137.0" onAction="#handleButtonAction" text="Click Me!" />
         <Label fx:id="label" layoutX="260.0" layoutY="177.0" minHeight="16" minWidth="69" />
@@ -47,5 +47,7 @@
          </font>
       </Label>
       <Button fx:id="advSearch" layoutX="447.0" layoutY="498.0" mnemonicParsing="false" onAction="#advSearch" text="Advanced Search" />
+      <Button fx:id="showDetails" layoutX="522.0" layoutY="768.0" mnemonicParsing="false" onAction="#showDetails" text="Show Details" />
+      <Button fx:id="showDetailsInPlace" layoutX="378.0" layoutY="768.0" mnemonicParsing="false" onAction="#showDetailsInPlace" text="Show Details In-Place" />
     </children>
 </AnchorPane>
